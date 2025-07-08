@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+@keyframes pulsate {
+
+	0%{		
+		box-shadow:
+		
+		0 0 10px rgba(26, 25, 25, 0.534),
+		
+		0 0 10px rgb(196, 197, 196);	
+	}
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,4 +43,44 @@ section#telefone {
     width: 225px;
 
     background: url(../imagens/frame-iphone.png) no-repeat center / cover;
+    
+}
+
+iframe#tela {
+    position: relative;
+    width: 193px;
+    height: 340px;
+
+    top: 58px;
+    left: 16.5px;
+
+    
+}
+
+section#redes-sociais{
+    display:  flex;
+    flex-direction:  column;
+    position: absolute;
+    right: 0;
+}
+
+
+section#redes-sociais img{
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.384);
+    box-sizing: border-box;
+
+    opacity: .75;
+    transition-duration: 0.4s;
+}
+
+section#redes-sociais img:hover {
+    outline: 1.5px solid white;
+    opacity: 1;
+    scale: 1.1;
+    
+    animation: pulsate 1s ease-in-out;
 }
